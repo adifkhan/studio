@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 6rem 1rem;
+  background: var(--primary-color);
+  box-shadow: 0 5px 15px rgba(10, 10, 10, 0.479);
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+}
+.branding a {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 1px;
+}
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  background: transparent;
+  border: 2px solid var(--secondary-color);
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.link:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
