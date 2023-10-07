@@ -1,16 +1,17 @@
 "use client";
-import React, { useReducer, useState } from "react";
+import React, { useContext, useReducer, useState } from "react";
 import styles from "@/app/styles/registration.module.css";
 import { FaLock, FaUserAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import { initialState, reducer } from "../hooks/UseReducer";
 import { useRouter } from "next/navigation";
+import { UserContext } from "../context/UserContext";
 
 const Register = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [message, setMessage] = useState("");
-  const [user, setUser] = useState({});
+  const { setToken } = useContext(UserContext);
   const router = useRouter();
 
   const handleChange = (e) => {
@@ -43,12 +44,12 @@ const Register = () => {
         if (!data.id) {
           return setMessage(data.errors[0]?.detail);
         }
-        setUser(data);
+        setToken(data.access);
+        localStorage.setItem("accessToken", data.access);
         setMessage("");
         router.push("/");
       });
   };
-  console.log(user);
   return (
     <div className={styles.register_container}>
       <div className={styles.register_wrapper}>

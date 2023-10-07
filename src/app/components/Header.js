@@ -1,25 +1,13 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "@/app/styles/header.module.css";
+import { UserContext } from "../context/UserContext";
 
 const Header = () => {
-  const [currentUser, setCurrentUser] = useState({});
-  // get current user //
-  const userInfo = {
-    id: "16",
-    username: "maynulislam",
-    first_name: "Maynul",
-    last_name: "Islam",
-  };
-  fetch("https://api.dvt.theyolostudio.com/auth/user", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((res) => res.json())
-    .then((data) => console.log(data));
+  const { user } = useContext(UserContext);
+  // console.log(user);
+
   return (
     <header className={styles.header}>
       <div className={styles.branding}>

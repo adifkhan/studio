@@ -2,7 +2,6 @@ export const initialState = {
   username: "",
   firstname: "",
   lastname: "",
-  email: "",
   password: "",
   confirmpassword: "",
 };

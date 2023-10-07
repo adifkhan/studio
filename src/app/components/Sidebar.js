@@ -9,14 +9,14 @@ import Link from "next/link";
 
 const sidebarItems = [
   {
-    title: "Attendence",
-    icon: <MdDateRange />,
-    link: "/attendence",
-  },
-  {
     title: "Dashboard",
     icon: <MdSpaceDashboard />,
     link: "/",
+  },
+  {
+    title: "Attendence",
+    icon: <MdDateRange />,
+    link: "/attendence",
   },
   {
     title: "Employee",

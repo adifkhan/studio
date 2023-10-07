@@ -1,14 +1,18 @@
 "use client";
-import React, { useReducer, useState } from "react";
+import React, { useContext, useReducer, useState } from "react";
 import styles from "@/app/styles/registration.module.css";
 import Link from "next/link";
 import { FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { initialState, reducer } from "../hooks/UseReducer";
+import { useRouter } from "next/navigation";
+import { UserContext } from "../context/UserContext";
 
 const Login = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [message, setMessage] = useState("");
+  const { setToken } = useContext(UserContext);
+  const router = useRouter();
 
   const handleChange = (e) => {
     dispatch({
@@ -21,11 +25,9 @@ const Login = () => {
     //create userinfo //
     const userInfo = {
       username: state.username,
-
       password: state.password,
     };
     // request a login //
-    console.log(userInfo);
     fetch("https://api.dvt.theyolostudio.com/auth/login", {
       method: "POST",
       headers: {
@@ -35,14 +37,13 @@ const Login = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        if (!data.id) {
+        if (!data.user) {
           return setMessage(data.errors[0]?.detail);
         }
-        // setUser(data);
-        // setMessage("");
-        // router.push("/");
-        console.log(data);
+        localStorage.setItem("accessToken", data.access);
+        setToken(data.access);
+        setMessage("");
+        router.push("/");
       });
   };
   return (
@@ -64,18 +65,6 @@ const Login = () => {
                 <MdEmail />
               </span>
             </div>
-            {/* <div className={styles.input_group}>
-              <input
-                type="email"
-                name="email"
-                required
-                onChange={handleChange}
-              />
-              <label htmlFor="">Email</label>
-              <span>
-                <MdEmail />
-              </span>
-            </div> */}
             <div className={styles.input_group}>
               <input
                 type="password"
