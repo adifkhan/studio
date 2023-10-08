@@ -14,8 +14,8 @@
   align-items: center;
   background: var(--text-light);
   width: 100%;
-  margin: 0 auto;
   border-radius: 5px;
+  padding: 1rem;
 }
 .user_mock {
   position: relative;
@@ -30,19 +30,21 @@
   }
 }
 .greeting p {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
-.greeting h3 {
-  font-size: 2.8rem;
+.greeting span {
+  font-size: 2rem;
   text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: 600;
 }
 .toggel_wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin: 1rem 0;
   background: var(--text-light);
   padding: 3rem;
+  gap: 10rem;
 }
 .toggel_box {
   display: flex;
@@ -67,13 +69,44 @@
 .attendence_count {
   font-size: 1.8rem;
 }
+.chart_wrapper {
+  width: 100%;
+  padding: 2rem;
+  background: var(--text-light);
+}
 .line_chart,
 .bar_chart,
 .pie_chart {
-  width: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  background: var(--text-light);
   margin: 1rem 0;
   border-radius: 5px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+/* --------------Responsiveness----------- */
+@media (max-width: 768px) {
+  .dashboard_container {
+    padding: 0.3rem;
+  }
+  .user_greeting {
+    flex-direction: column;
+  }
+  .greeting {
+    text-align: center;
+  }
+  .toggel_wrapper {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  .toggel_box {
+    gap: 0.5rem;
+    font-size: 1.4rem;
+  }
+  .chart_wrapper {
+    padding: 0;
+  }
 }

@@ -9,6 +9,7 @@ import {
   LineChart,
   Pie,
   PieChart,
+  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
@@ -45,11 +46,11 @@ const DataVisualization = ({ attendence, toggleChart }) => {
   });
   // console.log(data);
   return (
-    <div>
+    <div className={styles.chart_wrapper}>
       {toggleChart === "linechart" && (
         <div className={styles.line_chart}>
           <LineChart
-            width={1200}
+            width={1000}
             height={400}
             data={data}
             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
@@ -68,7 +69,7 @@ const DataVisualization = ({ attendence, toggleChart }) => {
       {toggleChart === "barchart" && (
         <div className={styles.bar_chart}>
           <BarChart
-            width={1200}
+            width={1000}
             height={400}
             data={data}
             margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
@@ -85,7 +86,7 @@ const DataVisualization = ({ attendence, toggleChart }) => {
       )}
       {toggleChart === "piechart" && (
         <div className={styles.pie_chart}>
-          <PieChart width={1200} height={400}>
+          <PieChart width={1000} height={400}>
             <Tooltip />
             <Pie
               data={data}

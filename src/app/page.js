@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Papa from "papaparse";
 import styles from "./page.module.css";
 import BaseLayout from "./components/BaseLayout";
-import Link from "next/link";
 
 export default function Home() {
   const [fileData, setFileData] = useState();

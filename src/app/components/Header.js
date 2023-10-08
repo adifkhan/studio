@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.branding}>
-        <Link href="/">Studio.</Link>
+        <Link href="/">Silver Studio</Link>
       </div>
       <div>
         {user.username ? (

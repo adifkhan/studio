@@ -27,9 +27,10 @@ const Dashboard = () => {
               ></Image>
             </div>
             <div className={styles.greeting}>
-              <p>Welcome Back</p>
-              <h3>{user?.username}</h3>
-              <p>Hope you are doing well.</p>
+              <p>
+                Welcome Back <span> {user?.username}</span>. Hope you are doing
+                well.
+              </p>
             </div>
           </div>
           <div className={styles.toggel_wrapper}>
