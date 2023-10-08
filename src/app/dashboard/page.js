@@ -67,7 +67,7 @@ const Dashboard = () => {
               </p>
             </div>
             <div className={styles.attendence_count}>
-              <p>Total Attendence: {attendence.length}</p>
+              <p>Total Attendence: {attendence?.length}</p>
             </div>
           </div>
           <DataVisualization
