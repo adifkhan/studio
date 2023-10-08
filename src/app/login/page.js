@@ -2,8 +2,7 @@
 import React, { useContext, useReducer, useState } from "react";
 import styles from "@/app/styles/registration.module.css";
 import Link from "next/link";
-import { FaLock } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { FaLock, FaUserAlt } from "react-icons/fa";
 import { initialState, reducer } from "../hooks/UseReducer";
 import { useRouter } from "next/navigation";
 import { UserContext } from "../context/UserContext";
@@ -62,7 +61,7 @@ const Login = () => {
               />
               <label htmlFor="">Username</label>
               <span>
-                <MdEmail />
+                <FaUserAlt />
               </span>
             </div>
             <div className={styles.input_group}>

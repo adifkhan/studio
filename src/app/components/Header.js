@@ -6,15 +6,20 @@ import { UserContext } from "../context/UserContext";
 
 const Header = () => {
   const { user } = useContext(UserContext);
-  // console.log(user);
 
   return (
     <header className={styles.header}>
       <div className={styles.branding}>
         <Link href="/">Studio.</Link>
       </div>
-      <div className={styles.link}>
-        <Link href="/login">Login</Link>
+      <div>
+        {user.username ? (
+          <p className={styles.user_profile}>{user.username}</p>
+        ) : (
+          <Link href="/login" className={styles.link}>
+            Login
+          </Link>
+        )}
       </div>
     </header>
   );

@@ -2,7 +2,7 @@
 import React, { useContext, useReducer, useState } from "react";
 import styles from "@/app/styles/registration.module.css";
 import { FaLock, FaUserAlt } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { BiSolidPencil } from "react-icons/bi";
 import Link from "next/link";
 import { initialState, reducer } from "../hooks/UseReducer";
 import { useRouter } from "next/navigation";
@@ -78,7 +78,7 @@ const Register = () => {
               />
               <label htmlFor="">First Name</label>
               <span>
-                <MdEmail />
+                <BiSolidPencil />
               </span>
             </div>
             <div className={styles.input_group}>
@@ -90,7 +90,7 @@ const Register = () => {
               />
               <label htmlFor="">Last Name</label>
               <span>
-                <MdEmail />
+                <BiSolidPencil />
               </span>
             </div>
             <div className={styles.input_group}>

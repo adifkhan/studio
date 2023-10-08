@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { UserProvider } from "./context/UserContext";
 import "./globals.css";
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <UserProvider>
           <Header />
           {children}
+          <Footer />
         </UserProvider>
       </body>
     </html>

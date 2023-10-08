@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import Papa from "papaparse";
 import styles from "./page.module.css";
 import BaseLayout from "./components/BaseLayout";
+import Link from "next/link";
 
 export default function Home() {
   const [fileData, setFileData] = useState();
+  const [message, setMessage] = useState("");
 
   /* 
   const handleFile = (e) => {
@@ -36,7 +38,7 @@ export default function Home() {
   };
   // console.log(fileData);
 
-  const handleSave = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("csv", fileData);
@@ -49,17 +51,31 @@ export default function Home() {
       body: formData,
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        console.log(data);
+        setMessage(
+          `Couldn't cope with the apis. I tried to POST data both in 'FormData' and 'json' formate several times. Every time server responded with - status code: 501, error: server error, details: not implemented, please kindly check my code at https://github.com/adifkhan/studio`
+        );
+      });
   };
   return (
     <BaseLayout>
-      <div>
-        <h1>Record Your Attendence</h1>
-        <form onSubmit={handleSave}>
-          <label htmlFor="">input attendence</label>
-          <input type="file" name="file" accept=".csv" onChange={handleFile} />
-          <input type="submit" value="Save" />
-        </form>
+      <div className={styles.attendence_container}>
+        <div className={styles.attendence_wrapper}>
+          <h2>Upload Attendence in .csv file</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="file"
+              name="file"
+              accept=".csv"
+              onChange={handleFile}
+            />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+        <div className={styles.dev_message}>
+          <p>{message}</p>
+        </div>
       </div>
     </BaseLayout>
   );

@@ -5,7 +5,7 @@
 .sidebar_retoggle {
   position: absolute;
   top: 2rem;
-  right: 0;
+  right: 50%;
   height: 2.5rem;
   width: 2.5rem;
   border: 1px solid var(--primary-color);
@@ -27,6 +27,7 @@
 .sidebar,
 .sidebar_collapse {
   height: 100%;
+  min-height: calc(100vh - 70px);
   padding: 5rem 1rem 0;
   background: var(--primary-color);
   transition: all 0.1s linear;
@@ -35,19 +36,32 @@
   width: 20rem;
 }
 .sidebar_collapse {
-  width: 5.2rem;
+  width: 5.4rem;
 }
 .sidebar .nav_item,
 .sidebar_collapse .nav_item {
   margin: 2rem 0;
+  background: #2c415096;
+  border-radius: 10px;
 }
-.nav_item a {
+.active_nav_item {
+  margin: 2rem 0;
+  background: #7fb1d4;
+  border-radius: 10px;
+}
+.nav_item a,
+.active_nav_item a {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 0.5rem;
-  background: var(--text-light);
   border-radius: 0.5rem;
+}
+.nav_item a {
+  color: var(--text-light);
+}
+.active_nav_item a {
+  color: var(--primary-color);
 }
 .sidebar .nav_icon,
 .sidebar_collapse .nav_icon {
@@ -61,4 +75,21 @@
 }
 .sidebar_collapse .nav_title {
   display: none;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 16rem;
+  }
+}
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100vw;
+  }
+  .sidebar_collapse {
+    width: 3.8rem;
+    padding: 5rem 0.3rem;
+  }
+  .sidebar_collapse .nav_icon {
+    font-size: 2rem;
+  }
 }

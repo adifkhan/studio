@@ -191,6 +191,9 @@
   .register_container {
     padding: 10rem 2rem;
   }
+  .register_wrapper {
+    padding: 2rem 1rem;
+  }
   .form_wrapper,
   .welcome_text {
     width: 100%;

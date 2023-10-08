@@ -1,0 +1,122 @@
+[
+  {
+    "Employee ID": "1",
+    "Employee Name": "Kath",
+    "Designation": "Automation Specialist IV",
+    "Date": "10/5/2023",
+    "Check-In Time": "2:45 PM",
+    "Check-Out Time": "9:56 PM"
+  },
+  {
+    "Employee ID": "2",
+    "Employee Name": "Alasdair",
+    "Designation": "General Manager",
+    "Date": "10/26/2023",
+    "Check-In Time": "1:01 PM",
+    "Check-Out Time": "7:33 AM"
+  },
+  {
+    "Employee ID": "3",
+    "Employee Name": "Penelopa",
+    "Designation": "Internal Auditor",
+    "Date": "10/6/2023",
+    "Check-In Time": "10:01 AM",
+    "Check-Out Time": "1:57 PM"
+  },
+  {
+    "Employee ID": "4",
+    "Employee Name": "Isabella",
+    "Designation": "Environmental Tech",
+    "Date": "10/5/2023",
+    "Check-In Time": "2:02 PM",
+    "Check-Out Time": "9:18 PM"
+  },
+  {
+    "Employee ID": "5",
+    "Employee Name": "Delmer",
+    "Designation": "Marketing Manager",
+    "Date": "10/10/2023",
+    "Check-In Time": "1:36 PM",
+    "Check-Out Time": "7:36 PM"
+  },
+  {
+    "Employee ID": "6",
+    "Employee Name": "Hermine",
+    "Designation": "Teacher",
+    "Date": "10/4/2023",
+    "Check-In Time": "10:01 AM",
+    "Check-Out Time": "9:23 PM"
+  },
+  {
+    "Employee ID": "7",
+    "Employee Name": "Lothaire",
+    "Designation": "Operator",
+    "Date": "10/27/2023",
+    "Check-In Time": "2:52 PM",
+    "Check-Out Time": "3:37 PM"
+  },
+  {
+    "Employee ID": "8",
+    "Employee Name": "Gare",
+    "Designation": "Civil Engineer",
+    "Date": "10/11/2023",
+    "Check-In Time": "11:11 AM",
+    "Check-Out Time": "3:56 PM"
+  },
+  {
+    "Employee ID": "9",
+    "Employee Name": "Eleen",
+    "Designation": "Geological Engineer",
+    "Date": "10/25/2023",
+    "Check-In Time": "10:05 AM",
+    "Check-Out Time": "10:35 AM"
+  },
+  {
+    "Employee ID": "10",
+    "Employee Name": "Afton",
+    "Designation": "Paralegal",
+    "Date": "10/11/2023",
+    "Check-In Time": "11:00 AM",
+    "Check-Out Time": "10:04 AM"
+  },
+  {
+    "Employee ID": "11",
+    "Employee Name": "Ulysses",
+    "Designation": "Administrative Officer",
+    "Date": "10/6/2023",
+    "Check-In Time": "2:45 PM",
+    "Check-Out Time": "10:05 AM"
+  },
+  {
+    "Employee ID": "12",
+    "Employee Name": "Olag",
+    "Designation": "Nurse Practicioner",
+    "Date": "10/27/2023",
+    "Check-In Time": "11:51 AM",
+    "Check-Out Time": "6:40 PM"
+  },
+  {
+    "Employee ID": "13",
+    "Employee Name": "Obadias",
+    "Designation": "Office Assistant I",
+    "Date": "10/24/2023",
+    "Check-In Time": "12:35 PM",
+    "Check-Out Time": "11:16 PM"
+  },
+  {
+    "Employee ID": "14",
+    "Employee Name": "Wallache",
+    "Designation": "Account Representative III",
+    "Date": "10/11/2023",
+    "Check-In Time": "11:29 AM",
+    "Check-Out Time": "11:15 AM"
+  },
+  {
+    "Employee ID": "15",
+    "Employee Name": "Ramon",
+    "Designation": "Research Nurse",
+    "Date": "10/8/2023",
+    "Check-In Time": "11:51 AM",
+    "Check-Out Time": "8:20 AM"
+  }
+]

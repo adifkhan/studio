@@ -1,0 +1,41 @@
+.employee_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem;
+}
+.employee_wrapper {
+  width: 100%;
+}
+.employee_wrapper h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(
+    0deg,
+    #b2c6c7 0%,
+    #7fb1d4 20%,
+    #7fb1d4 80%,
+    #c5f4f7 100%
+  );
+  border-radius: 10px;
+}
+.employee_wrapper table {
+  width: 90%;
+  margin: 0 auto;
+}
+.employee_wrapper th,
+.employee_wrapper td {
+  background: linear-gradient(
+    0deg,
+    #b2c6c7 0%,
+    #7fb1d4 20%,
+    #7fb1d4 80%,
+    #c5f4f7 100%
+  );
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.5rem;
+}
