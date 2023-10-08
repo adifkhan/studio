@@ -21,6 +21,12 @@ const Header = () => {
           </Link>
         )}
       </div>
+      <div className={styles.warning}>
+        <span>
+          please login with username: yolostudio, pass: 123456 .other accounts
+          causes issue. Althouth you can create new accounts.
+        </span>
+      </div>
     </header>
   );
 };

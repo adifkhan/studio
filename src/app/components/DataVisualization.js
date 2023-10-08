@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   Bar,
   BarChart,
@@ -17,7 +17,7 @@ import {
 import styles from "@/app/styles/dashboard.module.css";
 
 const DataVisualization = ({ attendence, toggleChart }) => {
-  const data = attendence.map((item) => {
+  const data = attendence?.map((item) => {
     return {
       name: item["Employee Name"],
       date: item.Date,

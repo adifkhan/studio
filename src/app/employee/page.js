@@ -24,7 +24,7 @@ const Employee = () => {
               </tr>
             </thead>
             <tbody>
-              {attendence.map((user, index) => (
+              {attendence?.map((user, index) => (
                 <tr key={index}>
                   <td>{user["Employee ID"]}</td>
                   <td>{user["Employee Name"]}</td>

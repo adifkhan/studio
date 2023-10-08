@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 const UseEmployee = () => {
   const { token } = useContext(UserContext);
-  const [attendence, setAttendence] = useState([]);
+  const [attendence, setAttendence] = useState(null);
   const router = useRouter();
 
   useEffect(() => {

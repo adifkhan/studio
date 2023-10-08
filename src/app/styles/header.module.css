@@ -48,6 +48,15 @@
   background: var(--secondary-color);
   color: var(--primary-color);
 }
+.warning {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  text-align: center;
+  color: red;
+}
 @media (max-width: 768px) {
   .header {
     padding: 2rem 4rem 1rem;
