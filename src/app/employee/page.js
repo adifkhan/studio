@@ -5,8 +5,11 @@ import styles from "@/app/styles/employee.module.css";
 import UseEmployee from "../hooks/UseEmployee";
 
 const Employee = () => {
-  const { attendence } = UseEmployee();
+  const { attendence, loading } = UseEmployee();
   // console.log(attendence);
+  if (loading) {
+    return <div className="loading">Loading...Please wait</div>;
+  }
   return (
     <BaseLayout>
       <div className={styles.employee_container}>

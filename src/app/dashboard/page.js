@@ -10,9 +10,11 @@ import UseEmployee from "../hooks/UseEmployee";
 
 const Dashboard = () => {
   const { user } = useContext(UserContext);
-  const { attendence } = UseEmployee();
+  const { attendence, loading } = UseEmployee();
   const [toggleChart, setToggleChart] = useState("barchart");
-
+  if (loading) {
+    return <div className="loading">Loading...Please wait</div>;
+  }
   return (
     <BaseLayout>
       <div className={styles.dashboard_container}>

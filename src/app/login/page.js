@@ -11,6 +11,7 @@ const Login = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [message, setMessage] = useState("");
   const { setToken } = useContext(UserContext);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const handleChange = (e) => {
@@ -21,6 +22,8 @@ const Login = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    setMessage("");
+    setLoading(true);
     //create userinfo //
     const userInfo = {
       username: state.username,
@@ -37,12 +40,14 @@ const Login = () => {
       .then((res) => res.json())
       .then((data) => {
         if (!data.user) {
+          setLoading(false);
           return setMessage(data.errors[0]?.detail);
         }
         localStorage.setItem("accessToken", data.access);
         setToken(data.access);
         setMessage("");
         router.push("/");
+        setLoading(false);
       });
   };
   return (
@@ -78,7 +83,7 @@ const Login = () => {
             </div>
             <p className="error_message">{message}</p>
             <button type="submit" className={styles.button}>
-              Login
+              {loading ? "Loging in..." : "Login"}
             </button>
             <div className={styles.toggel_page}>
               <p>

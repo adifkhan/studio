@@ -12,6 +12,7 @@ const Register = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [message, setMessage] = useState("");
   const { setToken } = useContext(UserContext);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const handleChange = (e) => {
@@ -22,6 +23,7 @@ const Register = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     if (state.password !== state.confirmpassword) {
       return setMessage("Password did not match!");
     }
@@ -42,12 +44,14 @@ const Register = () => {
       .then((res) => res.json())
       .then((data) => {
         if (!data.id) {
+          setLoading(false);
           return setMessage(data.errors[0]?.detail);
         }
         setToken(data.access);
         localStorage.setItem("accessToken", data.access);
         setMessage("");
         router.push("/");
+        setLoading(false);
       });
   };
   return (
@@ -119,7 +123,7 @@ const Register = () => {
             </div>
             <p className="error_message">{message}</p>
             <button type="submit" className={styles.button}>
-              Register
+              {loading ? "Registering..." : "Register"}
             </button>
             <div className={styles.toggel_page}>
               <p>
